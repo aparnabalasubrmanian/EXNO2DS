@@ -92,6 +92,29 @@ sns.scatterplot(x=dt["Age"],y=dt["Fare"])
 ```
 ![312087598-f44a4475-948b-4070-87e8-5b5c1cf03ea6](https://github.com/aparnabalasubrmanian/EXNO2DS/assets/123351172/3c454a46-7da6-4a00-aaad-84a0d722d31e)
 
+```
+sns.jointplot(x=dt["Age"],y=dt["Fare"],data=dt)
+```
+![312088001-73f0aaf9-cd78-411c-b8af-5e857c0db614](https://github.com/aparnabalasubrmanian/EXNO2DS/assets/123351172/c126e649-1f51-4a1b-9fe7-560c83881b5c)
+```
+fig,ax1=plt.subplots(figsize=(8,5))
+pt=sns.boxplot(ax=ax1,x='Pclass',y='Age',hue='Gender',data=dt)
+```
+![312088316-8b2d554b-a089-4e15-8b76-29f26fe6f40f](https://github.com/aparnabalasubrmanian/EXNO2DS/assets/123351172/2ad84b3f-3e39-4292-942e-5c9d5ce75b0e)
+```
+sns.catplot(data=dt,col="Survived",x="Gender",hue="Pclass",kind="count")
+```
+![312088646-570d378c-9f74-4ec8-9a20-df375e105912](https://github.com/aparnabalasubrmanian/EXNO2DS/assets/123351172/f13e9a90-7141-4b34-8113-ffeb80b41253)
+```
+corr=dt.corr()
+sns.heatmap(corr,annot=True)
+```
+![312088959-4b2293e7-e5d7-41fe-b0b1-64c59e5cfd49](https://github.com/aparnabalasubrmanian/EXNO2DS/assets/123351172/d6145544-4b82-45af-99da-8847f15abd76)
+```
+sns.pairplot(dt)
+```
+![312089950-4de84806-e138-419d-b9d9-776f376baff5](https://github.com/aparnabalasubrmanian/EXNO2DS/assets/123351172/7014040a-ec3c-4002-84f2-1b9711121b2a)
+![312090357-b3426fc2-b11f-4178-a30e-064d6f3a37a3](https://github.com/aparnabalasubrmanian/EXNO2DS/assets/123351172/355fb56d-74c3-49c0-bf58-147bd4329140)
 
 
 
@@ -99,4 +122,4 @@ sns.scatterplot(x=dt["Age"],y=dt["Fare"])
 
 
 # RESULT
-        <<INCLUDE YOUR RESULT HERE>>
+        Thus,Data Analyzing of the given dataset was successful.
